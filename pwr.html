@@ -23,13 +23,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Karla:400" rel="stylesheet">
         <link rel="icon" href="images/monogram.png">
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
-		<link rel="stylesheet" type="text/css" href="styles/timeline.css" />
+		<link rel="stylesheet" type="text/css" href="styles/movies.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
-		<script type="text/javascript" src="fullpage/vendors/scrolloverflow.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<!-- FontAwesome -->
+		<link 
+		rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
@@ -101,31 +102,58 @@
 			</div>
 		</header>
 
-		<!-- Section 1: In Progress -->
-		<section class="section container-fluid" id="inprogress">
+		<!-- Section 1: Intro -->
+		<section class="section container-fluid" id="intro">
 			<div class="row" >
-                      <div class="col-sm-12 vertical-center-container container-buffer" style="padding-top:35px" id="about">
-					<h2 class="centered-title"> Work in Progress</h2>
-					<img src="svg/wrench-solid.svg" class="w-25">
-                          <p>Check back later!</p>
+				<div class="col-sm-12 container-buffer d-flex justify-content-center" style="padding-top:35px" id="about">
+					 <div class="text-justify w-50 width-adjust-50">
+					 <h2 class="centered-title" >what am I up to?</h2>
+					 <p>Here you can find everything I've been playing, watching, and reading recently,
+						or you can visit my
+						<a href="https://rawg.io/@donutbelonghere" target="_blank">rawg.io</a>, 
+						<a href="https://letterboxd.com/DonutBelongHere/" target="_blank">Letterboxd</a>,
+						<a href="https://trakt.tv/users/donutbelonghere/" target="_blank">Trakt.tv</a>, and 
+						<a href="https://goodreads.com/rosabelledraws" target="_blank">Goodreads</a>
+						pages for a full history of everything (since I started keeping track!).
+			 </div>
+		 </div>
+		</section>
+
+		<section class="section container-fluid" id="movies">
+			<div class="row">
+				<div class="col-xs-6 vertical-top-container align-right-container container-buffer w-25" id="w-icon">
+					<a href="https://letterboxd.com/DonutBelongHere" class="w-icon fa fa-film"></a>
+				</div>
+				<div class="col-xs-auto container-buffer w-75" id="w-feed">					
 				</div>
 			</div>
 		</section>
+
+		<!-- Section 3: In Progress -->
+		<section class="section container-fluid" id="inprogress">
+			<div class="row" >
+                      <div class="col-sm-12 container-buffer" style="padding-top:35px" id="about">
+					<h2 class="centered-title"> Work in Progress</h2>
+					<img src="svg/wrench-solid.svg" class="w-25">
+                    <p>More still to come! Check back later!</p>
+				</div>
+			</div>
+        </section>
 		
 		<!-- Bottom Section: Connect -->
 		<section class="section container-fluid" id="connect">
 			<div class="row">
-				<div class="col-sm-12 vertical-center-container container-buffer d-flex justify-content-center">
+				<div class="col-sm-12 container-buffer d-flex justify-content-center">
 					<div class="text-justify w-75 connect-a">
 						<h2 class="centered-title" >Get in touch</h2>
 						<p style="text-align: center;">You can find all the places to contact me here.</p>
 						<div class="connect-a">
-							<a href="https://twitter.com/rosabelledraws" class="fa fa-twitter" target="_blank"></a>
-							<a href="https://www.linkedin.com/in/rosabellearmstead/" class="fa fa-linkedin" target="_blank"></a>
+							<a href="https://twitter.com/rosabelledraws" class="fab fa-twitter" target="_blank"></a>
+							<a href="https://www.linkedin.com/in/rosabellearmstead/" class="fab fa-linkedin" target="_blank"></a>
 							<a href="mailto:rosabelle.l.armstead@gmail.com" class="fa fa-envelope" target="_blank"></a>
-							<a href="https://www.instagram.com/rosabellearmstead/" class="fa fa-instagram" target="_blank"></a>
-							<a href="https://github.com/RosabelleArmstead" class="fa fa-github" target="_blank"></a>						
-							<a href="documents/CV.pdf" class="fa fa fa-file-text-o" target="_blank"></a>
+							<a href="https://www.instagram.com/rosabellearmstead/" class="fab fa-instagram" target="_blank"></a>
+							<a href="https://github.com/RosabelleArmstead" class="fab fa-github" target="_blank"></a>						
+							<a href="documents/CV.pdf" class="far fa-file-alt" target="_blank"></a>
 						</div>
 					</div>
 				</div>
@@ -162,6 +190,88 @@
     				$('.width-adjust-50').addClass('w-50').removeClass('w-75');
   				}
 			});
-        </script>
+		</script>
+
+		<!-- RSS Feed -->
+		<script>
+			const feedURL=`https%3A%2F%2Fletterboxd.com%2Fdonutbelonghere%2Frss%2F`;
+			var x = document.getElementById('w-feed');
+			let movies='';
+			
+			$.ajax({
+			  type: 'GET',
+			  url: "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL,
+			  dataType: 'jsonp',
+			  success: function(result) {
+				for(var i = 0; i < 9; i++) {
+					var obj = result.items[i];
+
+					// close old row
+					if ((i%3 === 0 && !(i === 0))) {
+						movies += '</div>'
+					}
+
+					// create new row
+					if (i%3 === 0 || i === 0) {
+						movies += '<div class="row">'
+					}
+
+					// get ratings and strip out of the title
+					var rating = obj.title.substring(obj.title.indexOf(' - ') + 3);
+					var ratingCount = (rating.length) - ((rating.match(/\u00BD/g) || []).length*0.5);
+					console.log(obj);
+					obj.title = obj.title.replace(obj.title.substring(obj.title.indexOf(' - ')), '');
+					// add class to movie poster
+					var newSubStr = `<p class="movie-poster"><img`;
+					obj.description = obj.description.replace('<p><img', newSubStr);
+					var newImgSubStr = `"><div class="allow-hover"><h2>${obj.title}</h2><a href="${obj.link}"><i class="fas fa-arrow-circle-right"></i></a></div></p> <div class="review-rating"><p class="movie-review">`;
+					obj.description = obj.description.replace('"></p> <p>', newImgSubStr);
+
+					// add a movie layout
+					movies += `
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 movie-outer">
+							<div class="movie-layout">
+					`;
+					//<p class="movie-title"><span class="outer-span"><span>${obj.title}</span></span></p>
+					
+					// rating
+					let ratingStars = '';
+					for (var star = 0; star < Math.floor(ratingCount); star++) {
+						if (obj.link.includes('https://letterboxd.com/donutbelonghere/film/portrait-of-a-lady-on-fire/')) {
+							ratingStars += `<i class="rating-fire fas fa-fire"></i>`;
+						}
+						else {
+							ratingStars += `<i class="rating-icon fas fa-star"></i>`;
+						}
+					}
+
+					if (ratingCount%1 != 0) {
+						ratingStars+='<i class="rating-icon fas fa-star-half-alt"></i>'
+					}
+
+					movies += `<p class="movie-rating"><span>${ratingStars}</span></p>`;
+
+					movies +=`${obj.description}`;
+
+
+					// close movie layout
+					movies += `
+								</div>
+							</div>
+						</div>
+					`;
+
+					// close final row
+					if (i === (9 - 1)) {
+						movies += '</div>'
+					}
+				}
+				// do something with the result
+				x.insertAdjacentHTML("afterbegin", movies);
+				console.log(movies);
+			  }
+			});
+		</script>
+
 	</body>
 </html>

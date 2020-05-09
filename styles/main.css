@@ -196,7 +196,12 @@ header .nav-list{
 }
 
 #connect a:hover {
-	color: white;
+	color: #ae78cf;
+	text-decoration: none;
+}
+
+.section:nth-child(2n) #connect a:hover {
+	color: #ae78cf;
 	text-decoration: none;
 }
 
@@ -225,13 +230,40 @@ header .nav-list{
   }
 
 .experience {
-	padding: .5% .6% .5% .6%;
-	width: auto;
-	background-color: #210035;
-	color: #ffffff;
+	font-size: 2em;
+	color: #210035;
 }
 
 .experience:hover {
 	color: #ae78cf;
 	text-decoration: none;
+}
+
+.vertical-top-container {
+	min-height: 100%;  
+	min-height: 100vh;
+  
+	display: flex;
+	align-items: flex-start;
+}
+
+.vertical-center-container {
+	min-height: 100%;  
+	min-height: 100vh;
+  
+	display: flex;
+	align-items: center;
+}
+
+.vertical-bottom-container {
+	min-height: 100%;  
+	min-height: 100vh;
+  
+	display: flex;
+	align-items: flex-end;
+}
+
+.align-right-container {  
+	display: flex;
+	justify-content: right;
 }
