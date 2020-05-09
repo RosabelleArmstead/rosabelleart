@@ -114,15 +114,15 @@
 	
 	/* icons */
 	.main-timeline .icon-content {
-		flex: 2 20%;
+		flex: 20%;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.main-timeline .timeline:nth-child(2n) .icon-content {
-		flex: 1 20%;
-		align-items: center;
-  		justify-content: center;
+	@media(max-width: 600px) {
+		.main-timeline .icon-content{
+			display: none;
+		}
 	}
 
 	.main-timeline .icon-content svg{
@@ -138,9 +138,8 @@
 	}
 
 	/* text */
-
 	.main-timeline .text-content {
-		flex: 1 80%;
+		flex: 80%;
 		display: flex;
 		flex-flow: column;
 		align-items: flex-end;
@@ -150,11 +149,7 @@
 	}
 
 	.main-timeline .timeline:nth-child(2n) .text-content {
-		flex: 2 80%;
-		display: flex;
-		flex-flow: column;
 		align-items: flex-start;
-		justify-content: center;
 		text-align: left;
 		padding-right: 0%;
 		padding-left: 5%;

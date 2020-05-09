@@ -2,7 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66596586-2"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-66596586-2'); </script>
+		<!-- Global site tag (gtag.js) - Google Analytics --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66596586-2"></script> 
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-66596586-2');
+        </script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,38 +33,14 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
-
-		<script>
-			$(document).scroll(function() {
-  				var dHeight = $(this).height()-$(window).height();
-  				if (dHeight >= $(this).scrollTop()) {
-    				$('header.nav-fixed').css('background', 'rgba(33, 0, 53,' + (4 * $(this).scrollTop()) / dHeight + ')');
-  				}
-			});
-		</script>
-		<script>
-			$(document).ready(function(){
-  				if(window.innerWidth < 810){
-    				$('.width-adjust-50').addClass('w-75').removeClass('w-50');
-  				}
-			});
-
-			$(window).resize(function(){
-  				if(window.innerWidth < 810){
-    				$('.width-adjust-50').addClass('w-75').removeClass('w-50');
-  				}else{
-    				$('.width-adjust-50').addClass('w-50').removeClass('w-75');
-  				}
-			});
-		</script>
-
 	</head>
+
 	<body>
 		<style>
 		body {
 		  font-size: calc(1em + .1vw);
 		  font-family: 'Karla', 'Verdana', sans-serif;
-		  color: rgb(33, 0, 53);
+		  color: #210035;
 		  height: 100%;
 
 		}
@@ -91,7 +76,9 @@
 		}
 
 		</style>
+
 		<div></div>
+
 		<!-- Nav Bar -->
 		<header id="navbar" class="nav-top nav-fixed nav-root">
 			<div class="container">
@@ -115,7 +102,7 @@
 			</div>
 		</header>
 
-		<!-- Core Content -->
+		<!-- Section 1: Intro -->
 		<section class="section container-fluid" id="home">
 				<div class="row" >
 					<div class="col-sm-12 vertical-center-container container-buffer d-flex justify-content-center" style="padding-top:35px" id="about">
@@ -131,6 +118,8 @@
 					</div>
 				</div>
 		</section>
+
+		<!-- Section 2: Student -->
 		<section class="section container-fluid">
 			<div class="row">
 				<div class="col-sm-12 vertical-center-container container-buffer d-flex justify-content-center">
@@ -156,6 +145,8 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Bottom Section: Connect -->
 		<section class="section container-fluid" id="connect">
 			<div class="row">
 				<div class="col-sm-12 vertical-center-container container-buffer d-flex justify-content-center">
@@ -175,8 +166,36 @@
 			</div>
 		</section>
 
+		<!-- fade in -->
 		<script>
 			ScrollReveal().reveal('.section', {duration: 2750, mobile: true});
-		</script>
+        </script>
+
+        <!-- nav bar -->
+        <script>
+			$(document).scroll(function() {
+  				var dHeight = $(this).height()-$(window).height();
+  				if (dHeight >= $(this).scrollTop()) {
+    				$('header.nav-fixed').css('background', 'rgba(33, 0, 53,' + (4 * $(this).scrollTop()) / dHeight + ')');
+  				}
+			});
+        </script>
+
+        <!-- width adjust -->
+        <script>
+			$(document).ready(function(){
+  				if(window.innerWidth < 810){
+    				$('.width-adjust-50').addClass('w-75').removeClass('w-50');
+  				}
+			});
+
+			$(window).resize(function(){
+  				if(window.innerWidth < 810){
+    				$('.width-adjust-50').addClass('w-75').removeClass('w-50');
+  				}else{
+    				$('.width-adjust-50').addClass('w-50').removeClass('w-75');
+  				}
+			});
+        </script>
 	</body>
 </html>
