@@ -67,7 +67,8 @@
 	.main-timeline .timeline-content{
 		width: 50%;
 		padding-right: 15%;
-		overflow: auto;
+		overflow: auto;		
+		white-space: nowrap;
 	}
 
 	.main-timeline .icon{
@@ -167,16 +168,19 @@
 	}
 
 	.main-timeline .year{
+		float: right;
 		font-size: calc(10px + .6vw);
 		text-align: right;
 	}
 
 	.main-timeline .timeline:nth-child(2n) .year{
 		text-align: left;
+		float: left;
 	}
 
 	.main-timeline .year span{
 		display: inline-block;
+		white-space: nowrap;
 		padding: 6px 25px 6px 25px;
 		background: #6b368b;
 		border-radius: 50px 50px 50px 50px;
