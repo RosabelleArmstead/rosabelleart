@@ -6,6 +6,10 @@
     margin-left: auto;
 }
 
+.section:nth-child(2n) .w-icon {
+    color: #210035;
+}
+
 #w-icon a:hover {
     text-decoration: none;
     color: #ae78cf;
@@ -23,8 +27,8 @@
 .allow-hover {
     background: rgba(54, 7, 93, 0.623);
     bottom: 0;
-    margin-top: -10%;
-    margin-bottom: 5%;
+    margin-top: -5%;
+    margin-bottom: 0;
     color: white;
     left: 0;
     opacity: 0;
@@ -40,11 +44,16 @@
     justify-content: center;
     align-content: center;
 }
-  
+
+.section:nth-child(2n) .allow-hover{
+    background:  rgba(240, 222, 255, 0.808);
+    color: #210035;
+}
+
 .allow-hover:hover { 
     opacity: 1; 
 }
-  
+
 .allow-hover h2 { 
     margin-top: 0;
     padding: 3%;
@@ -52,16 +61,20 @@
 }
 
 .allow-hover a{ 
-    text-decoration: none;    
+    text-decoration: none;  
+    color: #fff;  
     font-size: calc(50px + .3vw);
+}
+
+.section:nth-child(2n) .allow-hover a { 
+    color: #210035;
 }
 
 .allow-hover a:hover{ 
     -webkit-transition: 0.6s;
     transition: 0.6s;
-    color: #fff;
+    color: #ae78cf;
 }
-
 
 .movie-review {
     overflow: hidden;
