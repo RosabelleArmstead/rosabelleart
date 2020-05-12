@@ -113,7 +113,7 @@
 						<a href="https://rawg.io/@donutbelonghere" target="_blank">rawg.io</a>, 
 						<a href="https://letterboxd.com/DonutBelongHere/" target="_blank">Letterboxd</a>,
 						<a href="https://trakt.tv/users/donutbelonghere/" target="_blank">Trakt.tv</a>, and 
-						<a href="https://goodreads.com/rosabelledraws" target="_blank">Goodreads</a>
+						<a href="https://goodreads.com/donutbelonghere" target="_blank">Goodreads</a>
 						pages for a full history of everything (since I started keeping track!).
 			 </div>
 		 </div>
@@ -125,19 +125,13 @@
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
 					<p>Games still to come!</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- Section 3: TODO: Shows -->
-		<section class="section container-fluid" id="shows">
-			<div class="row">
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
-					<p>Shows still to come!</p>
+					<p class="disclaimer">Data provided by rawg.io.</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Section 4: Movies -->
+		<!-- Section 3: Movies -->
 		<section class="section container-fluid" id="movies">
 			<div class="row">
 				<div class="col-xs-6 vertical-top-container align-right-container container-buffer w-25" id="w-icon">
@@ -145,28 +139,39 @@
 				</div>
 				<div class="col-xs-auto container-buffer w-75" id="w-feed">					
 				</div>
+				<div class="col-sm-12 container-buffer d-flex justify-content-center">
+					<p class="disclaimer">Data provided by Letterboxd.</p>
+				</div>
 			</div>
 		</section>
-
-		<!-- Section 4: TODO: Books -->
+		
+		<!-- Section 4: Shows -->
 		<section class="section container-fluid" id="shows">
 			<div class="row">
+				<div class="col-xs-6 vertical-top-container align-right-container container-buffer w-25" id="w-icon">
+					<a href="https://trakt.tv/users/donutbelonghere/" class="w-icon fas fa-tv"></a>
+				</div>
+				<div class="col-xs-auto container-buffer w-75" id="s-feed">					
+				</div>
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
-					<p>Books still to come!</p>
+					<p class="disclaimer">Data provided by Trakt.tv.</p>
+				</div>
+			</div>
+		</section>		
+		
+		<!-- Section 4: Books -->
+		<section class="section container-fluid" id="books">
+			<div class="row">
+				<div class="col-xs-6 vertical-top-container align-right-container container-buffer w-25" id="w-icon">
+					<a href="https://goodreads.com/donutbelonghere" class="w-icon fas fa-book-reader"></a>
+				</div>
+				<div class="col-xs-auto container-buffer w-75" id="r-feed">					
+				</div>
+				<div class="col-sm-12 container-buffer d-flex justify-content-center">
+					<p class="disclaimer">Data provided by Goodreads.</p>
 				</div>
 			</div>
 		</section>
-
-		<!-- Section 3: In Progress -->
-		<section class="section container-fluid" id="inprogress">
-			<div class="row" >
-                      <div class="col-sm-12 container-buffer" style="padding-top:35px" id="about">
-					<h2 class="centered-title"> Work in Progress</h2>
-					<img src="svg/wrench-solid.svg" class="w-25">
-                    <p>More still to come! Check back later!</p>
-				</div>
-			</div>
-        </section>
 		
 		<!-- Bottom Section: Connect -->
 		<section class="section container-fluid" id="connect">
@@ -220,7 +225,64 @@
 			});
 		</script>
 
-		<!-- RSS Feed -->
+		<!-- Shows RSS Feed -->
+		<script>
+			const showsURL=`https://trakt.tv/users/donutbelonghere/history/shows/added.atom?slurm=1b5784d401303f6a18abbd540130ca09`;
+			var showFeed = document.getElementById('s-feed');
+			let shows='';
+
+			$.ajax({
+				type: 'GET',
+				url: "https://api.rss2json.com/v1/api.json?rss_url=" + showsURL,
+				dataType: 'jsonp',
+				success: function(showResult) {
+					for(var i=0; i<9; i++) {
+						var show = showResult.items[i];
+						console.log(show);
+						
+						// close old row
+						if ((i%3===0 && !(i===0))) {
+							shows += '</div>';
+						}
+
+						// create new row
+						if (i%3===0 || i===0) {
+							shows += '<div class="row">';
+						}
+
+						// add a show layout
+						shows += `
+							<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 movie-outer">
+								<div class="movie-layout">
+						`;
+
+						shows +=`
+								<p class="movie-poster">
+								<img src="${show.thumbnail}">
+								<div class="allow-hover">
+									<h2>${show.title}</h2>
+									<a href="${show.link}"><i class="fas fa-arrow-circle-right"></i></a>
+								</div>
+								</p>
+						`;
+
+						// close movie layout
+						shows += `
+									</div>
+								</div>
+						`;
+
+						// close final row
+						if (i === (9 - 1)) {
+							shows += '</div>'
+						}
+					}
+					showFeed.insertAdjacentHTML("afterbegin", shows);
+				}
+			});
+		</script>
+
+		<!-- Movies RSS Feed -->
 		<script>
 			const feedURL=`https%3A%2F%2Fletterboxd.com%2Fdonutbelonghere%2Frss%2F`;
 			var x = document.getElementById('w-feed');
@@ -236,18 +298,17 @@
 
 					// close old row
 					if ((i%3 === 0 && !(i === 0))) {
-						movies += '</div>'
+						movies += '</div>';
 					}
 
 					// create new row
 					if (i%3 === 0 || i === 0) {
-						movies += '<div class="row">'
+						movies += '<div class="row">';
 					}
 
 					// get ratings and strip out of the title
 					var rating = obj.title.substring(obj.title.indexOf(' - ') + 3);
 					var ratingCount = (rating.length) - ((rating.match(/\u00BD/g) || []).length*0.5);
-					console.log(obj);
 					obj.title = obj.title.replace(obj.title.substring(obj.title.indexOf(' - ')), '');
 					// add class to movie poster
 					var newSubStr = `<p class="movie-poster"><img`;
@@ -260,8 +321,7 @@
 						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 movie-outer">
 							<div class="movie-layout">
 					`;
-					//<p class="movie-title"><span class="outer-span"><span>${obj.title}</span></span></p>
-					
+
 					// rating
 					let ratingStars = '';
 					for (var star = 0; star < Math.floor(ratingCount); star++) {
@@ -274,7 +334,7 @@
 					}
 
 					if (ratingCount%1 != 0) {
-						ratingStars+='<i class="rating-icon fas fa-star-half-alt"></i>'
+						ratingStars+='<i class="rating-icon fas fa-star-half-alt"></i>';
 					}
 
 					movies += `<p class="movie-rating"><span>${ratingStars}</span></p>`;
@@ -291,12 +351,82 @@
 
 					// close final row
 					if (i === (9 - 1)) {
-						movies += '</div>'
+						movies += '</div>';
 					}
 				}
-				// do something with the result
 				x.insertAdjacentHTML("afterbegin", movies);
-				console.log(movies);
+			  }
+			});
+		</script>
+
+		<!-- Books RSS Feed -->
+		<script>
+			const booksURL=`https://www.goodreads.com/review/list/47787283.xml?key=dM2DG71b9bfchYE5oHHfuA&v=2&shelf=read&sort=date_read&page=1&per_page=9`;
+			var rhtml = document.getElementById('r-feed');
+			let books='';
+			
+			$.ajax({
+			  type: 'GET',
+			  url: 'https://cors-anywhere.herokuapp.com/'+booksURL,
+			  dataType: 'xml',
+			  success: function(booksresult) {
+				for(var i = 0; i < 9; i++) {
+					var bookReview = booksresult.getElementsByTagName("review")[i];
+					var bookBook = bookReview.getElementsByTagName("book")[0];
+					var bookTitle = bookBook.getElementsByTagName("title_without_series")[0].childNodes[0].nodeValue;
+					var bookAuthor = bookBook.getElementsByTagName("authors")[0].getElementsByTagName("author")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+					var reviewLink = bookReview.getElementsByTagName("url")[0].childNodes[0].nodeValue;
+					var bookImage = bookBook.getElementsByTagName("image_url")[0].childNodes[0].nodeValue;
+					var bookRating = bookReview.getElementsByTagName("rating")[0].childNodes[0].nodeValue;
+					
+					// close old row
+					if ((i%3 === 0 && !(i === 0))) {
+						books += '</div>';
+					}
+
+					// create new row
+					if (i%3 === 0 || i === 0) {
+						books += '<div class="row">';
+					}
+
+					// add a book layout
+					books += `
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 movie-outer">
+							<div class="movie-layout">
+					`;
+										
+					// rating
+					let bookRatingStars = '';
+					for (var bookStar = 0; bookStar < bookRating; bookStar++) {
+						bookRatingStars += `<i class="rating-icon fas fa-star"></i>`;
+					}
+
+					books += `<p class="movie-rating"><span>${bookRatingStars}</span></p>`;
+
+					books +=`
+								<p class="movie-poster">
+								<img src="${bookImage}">
+								<div class="allow-hover">
+									<h2>${bookTitle}</h2>
+									<h5>${bookAuthor}</h5>
+									<a href="${reviewLink}"><i class="fas fa-arrow-circle-right"></i></a>
+								</div>
+								</p>
+					`;
+
+
+					// close movie layout
+					books += `
+								</div>
+							</div>
+					`;
+
+					// close final row
+					if (i === (9 - 1)) {
+						books += '</div>';
+					}
+				}
+				rhtml.insertAdjacentHTML("afterbegin", books);
 			  }
 			});
 		</script>
