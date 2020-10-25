@@ -1,3 +1,8 @@
+.art-layout {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
 .art-layout img {
     width: 100%;
 }
@@ -6,7 +11,7 @@
     background: rgba(54, 7, 93, 0.623);
     bottom: 0;
     margin-top: -5%;
-    margin-bottom: 0;
+    margin-bottom: 2.5%;
     color: white;
     left: 0;
     opacity: 0;
