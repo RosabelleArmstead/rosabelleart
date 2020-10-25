@@ -183,15 +183,7 @@
 
 		<!-- gallery -->
 		<script>
-			// handle button press
-			const pagemodes = {
-				GALLERY: 'gallerybtn',
-				SKETCHBOOK: 'sketchbookbtn',
-				PRINTS: 'printsbtn'
-			}
-			
-			let pagemode = pagemodes.GALLERY;
-
+			// variables
 			var data = JSON.parse(art);
 			var gallery = data[0].gallery;
 			var sketchbook = data[0].sketchbook;
@@ -200,7 +192,61 @@
 			var slug = './images/art/thumbnails/';
 			var prints = "";
 
+			// insert the gallery html
+			function displayGallery(displaydata) {
+				for (var i=0; i<displaydata.length; i++) {
+					var artwork = displaydata[i];
+					// close old row
+					if ((i%3===0) && !(i===0)) {
+						galleryhtml += '</div>';
+					}
+
+					// create new row
+					if (i%3===0 || i===0) {
+						galleryhtml += '<center><div class="row">';
+					}
+
+					// add an artwork layout
+					galleryhtml += `
+						<div class="col-sm-4 art-outer">
+							<div class="art-layout">
+						`;
+
+					galleryhtml += `
+							<p class="artwork">
+							<img src="${slug}${artwork.filename}">
+							<div class="allow-hover">
+								<h2>${artwork.name}</h2>
+							</div>
+							</p>
+						`;
+
+					galleryhtml += `
+								</div>
+							</div>
+					`;
+
+					// close final row
+					if (i === (displaydata.length - 1)) {
+						galleryhtml += '</div></center>'
+					}
+				}				
+			galleryLayout.innerHTML = galleryhtml;
+			}
+		</script>
+
+		<!-- handle button press -->
+		<script>
+			const pagemodes = {
+				GALLERY: 'gallerybtn',
+				SKETCHBOOK: 'sketchbookbtn',
+				PRINTS: 'printsbtn'
+			}
+			
+			let pagemode = pagemodes.GALLERY;
+
 			function switchPageMode(btnid) {
+				galleryhtml = '';
 				var btns = document.getElementsByClassName("pagetab");
 				for (btn of btns) {
 					btn.style.background="";
@@ -219,60 +265,22 @@
 				}				
 				// styling change
 				document.getElementById(btnid).style.background = "green";
-			}
-			
-			// populate data to show
-			switch (pagemode)
-			{
-				case pagemodes.GALLERY: dataToShow = gallery; break;
-				case pagemodes.SKETCHBOOK: dataToShow = sketchbook; break;
-				case pagemodes.PRINTS: dataToShow = prints; break;
-				default: dataToShow = gallery; break;
-			}
 
-			console.log(pagemode);
-			console.log(dataToShow);
-
-			galleryhtml += "<div>";
-			for (var i=0; i<dataToShow.length; i++) {
-				var artwork = dataToShow[i];
-				// close old row
-				if ((i%3===0) && !(i===0)) {
-					galleryhtml += '</div>';
+				// populate data to show
+				switch (pagemode)
+				{
+					case pagemodes.GALLERY: dataToShow = gallery; break;
+					case pagemodes.SKETCHBOOK: dataToShow = sketchbook; break;
+					case pagemodes.PRINTS: dataToShow = prints; break;
+					default: dataToShow = gallery; break;
 				}
-				
-				// create new row
-				if (i%3===0 || i===0) {
-					galleryhtml += '<center><div class="row">';
-				}
-
-				// add an artwork layout
-				galleryhtml += `
-					<div class="col-sm-4 art-outer">
-						<div class="art-layout">
-					`;
-
-				galleryhtml += `
-						<p class="artwork">
-						<img src="${slug}${artwork.filename}">
-						<div class="allow-hover">
-							<h2>${artwork.name}</h2>
-						</div>
-						</p>
-					`;
-
-				galleryhtml += `
-							</div>
-						</div>
-				`;
-
-				// close final row
-				if (i === (dataToShow.length - 1)) {
-					galleryhtml += '</div></center>'
-				}
+				displayGallery(dataToShow);
+				console.log("after: " + galleryhtml);
 			}
-			galleryhtml += "</div>";
-			galleryLayout.insertAdjacentHTML("afterbegin", galleryhtml);
+		</script>
+
+		<script>
+			displayGallery(gallery);
 		</script>
 	</body>
 </html>
