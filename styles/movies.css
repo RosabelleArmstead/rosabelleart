@@ -1,5 +1,7 @@
 #w-icon {
     font-size: 10vw;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .w-icon {
@@ -13,6 +15,8 @@
 #w-icon a:hover {
     text-decoration: none;
     color: #ae78cf;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .movie-outer {

@@ -109,10 +109,14 @@ header .nav-list{
 	color:#f2ddff;
 	margin:0 0 0 1em;
 	font-size: 80%;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .nav-list li a:hover{
 	color:#ae78cf;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .nav-list li a.active{
@@ -152,11 +156,15 @@ header .nav-list{
 
 .section:nth-child(2n) a {
 	color: white;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .section:nth-child(2n) a:hover {
 	color: white;
 	text-decoration: underline;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 /* section formatting */
@@ -189,6 +197,8 @@ header .nav-list{
 	margin-left: 10px;
 	margin-right: 10px;
 	color: #210035;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .connect-a {
@@ -198,11 +208,15 @@ header .nav-list{
 #connect a:hover {
 	color: #ae78cf;
 	text-decoration: none;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .section:nth-child(2n) #connect a:hover {
 	color: #ae78cf;
 	text-decoration: none;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 #community {
@@ -232,11 +246,15 @@ header .nav-list{
 .experience {
 	font-size: 2em;
 	color: #210035;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .experience:hover {
 	color: #ae78cf;
 	text-decoration: none;
+	-webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .disclaimer {
