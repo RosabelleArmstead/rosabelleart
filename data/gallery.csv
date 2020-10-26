@@ -1,6 +1,6 @@
-name,media,filename,purchase-link
-Vista,procreate,PrintVista.png,
-Ellie,procreate,PrintEllie.png,
+name,media,filename,purchase
+Vista,procreate,PrintVista.png,yes
+Ellie,procreate,PrintEllie.png,yes
 Bear Sketch,procreate,PrintBearSketch.png,
 Root Sketch,procreate,PrintRootSketch.png,
 Sameen Shaw Sketch,procreate,PrintSameenShawSketch.png,
@@ -12,15 +12,15 @@ Oriental Magpie Robin,procreate,PrintOrientalMagpieRobin.png,
 Red-capped Robin,procreate,PrintRedCappedRobin.png,
 Eastern Yellow Robin,procreate,PrintYellowRobin.png,
 Pink Robin,procreate,PrintPinkRobin.png,
-Niagara Falls,procreate,PrintNiagaraFalls.png,
-Wax Resist Experiment,procreate,PrintWaxResist.png,
-Root (II),adobe photoshop cs6,PrintRoot2.jpg,
-Harold Finch,adobe photoshop cs6,PrintFinch.png,
-Root,adobe photoshop cs6,PrintRoot.png,
-Sameen Shaw,adobe photoshop cs6,PrintShaw.png,
-Lincoln,adobe photoshop cs6,PrintLincoln.png,
-Lexa (II),adobe photoshop cs6,PrintLexa.png,
-Clarke Griffin,adobe photoshop cs6,PrintClarke.png,
+Niagara Falls,procreate,PrintNiagaraFalls.png,yes
+Wax Resist Experiment,procreate,PrintWaxResist.png,yes
+Root (II),adobe photoshop cs6,PrintRoot2.jpg,yes
+Harold Finch,adobe photoshop cs6,PrintFinch.png,yes
+Root,adobe photoshop cs6,PrintRoot.png,yes
+Sameen Shaw,adobe photoshop cs6,PrintShaw.png,yes
+Lincoln,adobe photoshop cs6,PrintLincoln.png,yes
+Lexa (II),adobe photoshop cs6,PrintLexa.png,yes
+Clarke Griffin,adobe photoshop cs6,PrintClarke.png,yes
 Chris Pratt,"HB, 3B and 7B pencils",ChrisPratt.jpg,
 Chris Colfer,paint.NET,ChrisColfer.jpg,
 Anna Kendrick,"HB, 2B, 3B and 6B pencils",AnnaKendrick.jpg,

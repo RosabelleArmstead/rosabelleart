@@ -116,7 +116,6 @@
 		</section>
 		
 		<!-- Section 2: Gallery -->
-		<!-- TODO: Add tabs for gallery or sketchbook? -->
 		<section class="section container-fluid" id="gallery">
 			<div class="row">
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
@@ -183,6 +182,29 @@
 
 		<!-- gallery -->
 		<script>
+			// get pieces with prints
+			function getPrints(jsondata) {
+				var returnarr = new Array();
+				for (x of jsondata[0].gallery) {
+					if (x.hasOwnProperty('purchase')) {
+						if (x.purchase != "") {
+							returnarr.push(x);
+						}
+					}
+				}
+				for (x of jsondata[0].sketchbook) {
+					if (x.hasOwnProperty('purchase')) {
+						if(x.purchase != "") {
+							returnarr.push(x);
+						}
+					}
+				}
+				console.log(returnarr);
+				return returnarr;
+			}
+		</script>
+
+		<script>
 			// variables
 			var data = JSON.parse(art);
 			var gallery = data[0].gallery;
@@ -190,7 +212,7 @@
 			var galleryLayout = document.getElementById('g-layout');
 			let galleryhtml='';
 			var slug = './images/art/thumbnails/';
-			var prints = "";
+			var prints = getPrints(data);
 
 			// insert the gallery html
 			function displayGallery(displaydata) {

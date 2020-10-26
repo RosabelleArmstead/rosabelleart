@@ -5,253 +5,253 @@ art = `[
 			  "name": "Vista",
 			  "media": "procreate",
 			  "filename": "PrintVista.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Ellie",
 			  "media": "procreate",
 			  "filename": "PrintEllie.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Bear Sketch",
 			  "media": "procreate",
 			  "filename": "PrintBearSketch.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Root Sketch",
 			  "media": "procreate",
 			  "filename": "PrintRootSketch.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Sameen Shaw Sketch",
 			  "media": "procreate",
 			  "filename": "PrintSameenShawSketch.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Harold Finch Sketch",
 			  "media": "procreate",
 			  "filename": "PrintHaroldFinchSketch.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "John Reese Sketch",
 			  "media": "procreate",
 			  "filename": "PrintJohnReeseSketch.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Round of Robins",
 			  "media": "procreate",
 			  "filename": "PrintRobins.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "European Robin",
 			  "media": "procreate",
 			  "filename": "PrintEuropeanRobin.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Oriental Magpie Robin",
 			  "media": "procreate",
 			  "filename": "PrintOrientalMagpieRobin.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Red-capped Robin",
 			  "media": "procreate",
 			  "filename": "PrintRedCappedRobin.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Eastern Yellow Robin",
 			  "media": "procreate",
 			  "filename": "PrintYellowRobin.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Pink Robin",
 			  "media": "procreate",
 			  "filename": "PrintPinkRobin.png",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Niagara Falls",
 			  "media": "procreate",
 			  "filename": "PrintNiagaraFalls.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Wax Resist Experiment",
 			  "media": "procreate",
 			  "filename": "PrintWaxResist.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Root (II)",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintRoot2.jpg",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Harold Finch",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintFinch.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Root",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintRoot.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Sameen Shaw",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintShaw.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Lincoln",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintLincoln.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Lexa (II)",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintLexa.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Clarke Griffin",
 			  "media": "adobe photoshop cs6",
 			  "filename": "PrintClarke.png",
-			  "purchase-link": ""
+			  "purchase": "yes"
 			},
 			{
 			  "name": "Chris Pratt",
 			  "media": "HB, 3B and 7B pencils",
 			  "filename": "ChrisPratt.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Chris Colfer",
 			  "media": "paint.NET",
 			  "filename": "ChrisColfer.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Anna Kendrick",
 			  "media": "HB, 2B, 3B and 6B pencils",
 			  "filename": "AnnaKendrick.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Joey Graceffa",
 			  "media": "HB, 3B and 7B pencils",
 			  "filename": "JoeyGraceffa.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Lexa",
 			  "media": "HB, 2B and 4B pencils",
 			  "filename": "Lexa.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Heather Morris",
 			  "media": "HB, 3B and 7B pencils",
 			  "filename": "HeatherMorris.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Taylor Swift",
 			  "media": "HB, 3B and 8B pencils",
 			  "filename": "TaylorSwift.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Jeff Blim",
 			  "media": "HB, B and 3B pencils",
 			  "filename": "JeffBlim.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Grace Helbig",
 			  "media": "HB, B and 4B pencils",
 			  "filename": "GraceHelbig.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Killian Jones",
 			  "media": "HB, 3B and 8B pencils",
 			  "filename": "Hook.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Joe Moses",
 			  "media": "graphite pencils",
 			  "filename": "JoeMoses.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Klaine (Auditorium)",
 			  "media": "graphite pencils",
 			  "filename": "KlaineAuditorium.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Becca Tobin",
 			  "media": "graphite pencils",
 			  "filename": "BeccaTobin.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Brittana (100)",
 			  "media": "graphite pencils",
 			  "filename": "Brittana100.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Joey Richter",
 			  "media": "blue colouring pencils",
 			  "filename": "JoeyRichter.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Joe Walker",
 			  "media": "colouring pencils",
 			  "filename": "JoeWalker.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Elsa",
 			  "media": "graphite pencils",
 			  "filename": "Elsa.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Darren Criss",
 			  "media": "pink and purple colouring pencils",
 			  "filename": "DarrenCriss.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "St. Paul's Cathedral",
 			  "media": "biro",
 			  "filename": "StPauls.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			},
 			{
 			  "name": "Westminster Abbey",
 			  "media": "watercolours",
 			  "filename": "WestminsterAbbey.jpg",
-			  "purchase-link": ""
+			  "purchase": ""
 			}
 		  ],
         "sketchbook": [
