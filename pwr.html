@@ -238,7 +238,6 @@
 				success: function(showResult) {
 					for(var i=0; i<9; i++) {
 						var show = showResult.items[i];
-						
 						// close old row
 						if ((i%3===0 && !(i===0))) {
 							shows += '</div>';
@@ -257,7 +256,7 @@
 
 						shows +=`
 								<p class="movie-poster">
-								<img src="${show.thumbnail}">
+								<img src="${show.thumbnail}.webp">
 								<div class="allow-hover">
 									<h2>${show.title}</h2>
 									<a href="${show.link}"><i class="fas fa-arrow-circle-right"></i></a>
