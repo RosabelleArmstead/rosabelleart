@@ -1,43 +1,43 @@
-name,media,filename,purchase
-Vista,procreate,PrintVista.png,yes
-Ellie,procreate,PrintEllie.png,yes
-Bear Sketch,procreate,PrintBearSketch.png,
-Root Sketch,procreate,PrintRootSketch.png,
-Sameen Shaw Sketch,procreate,PrintSameenShawSketch.png,
-Harold Finch Sketch,procreate,PrintHaroldFinchSketch.png,
-John Reese Sketch,procreate,PrintJohnReeseSketch.png,
-Round of Robins,procreate,PrintRobins.png,
-European Robin,procreate,PrintEuropeanRobin.png,
-Oriental Magpie Robin,procreate,PrintOrientalMagpieRobin.png,
-Red-capped Robin,procreate,PrintRedCappedRobin.png,
-Eastern Yellow Robin,procreate,PrintYellowRobin.png,
-Pink Robin,procreate,PrintPinkRobin.png,
-Niagara Falls,procreate,PrintNiagaraFalls.png,yes
-Wax Resist Experiment,procreate,PrintWaxResist.png,yes
-Root (II),adobe photoshop cs6,PrintRoot2.jpg,yes
-Harold Finch,adobe photoshop cs6,PrintFinch.png,yes
-Root,adobe photoshop cs6,PrintRoot.png,yes
-Sameen Shaw,adobe photoshop cs6,PrintShaw.png,yes
-Lincoln,adobe photoshop cs6,PrintLincoln.png,yes
-Lexa (II),adobe photoshop cs6,PrintLexa.png,yes
-Clarke Griffin,adobe photoshop cs6,PrintClarke.png,yes
-Chris Pratt,"HB, 3B and 7B pencils",ChrisPratt.jpg,
-Chris Colfer,paint.NET,ChrisColfer.jpg,
-Anna Kendrick,"HB, 2B, 3B and 6B pencils",AnnaKendrick.jpg,
-Joey Graceffa,"HB, 3B and 7B pencils",JoeyGraceffa.jpg,
-Lexa,"HB, 2B and 4B pencils",Lexa.jpg,
-Heather Morris,"HB, 3B and 7B pencils",HeatherMorris.jpg,
-Taylor Swift,"HB, 3B and 8B pencils",TaylorSwift.jpg,
-Jeff Blim,"HB, B and 3B pencils",JeffBlim.jpg,
-Grace Helbig,"HB, B and 4B pencils",GraceHelbig.jpg,
-Killian Jones,"HB, 3B and 8B pencils",Hook.jpg,
-Joe Moses,graphite pencils,JoeMoses.jpg,
-Klaine (Auditorium),graphite pencils,KlaineAuditorium.jpg,
-Becca Tobin,graphite pencils,BeccaTobin.jpg,
-Brittana (100),graphite pencils,Brittana100.jpg,
-Joey Richter,blue colouring pencils,JoeyRichter.jpg,
-Joe Walker,colouring pencils,JoeWalker.jpg,
-Elsa,graphite pencils,Elsa.jpg,
-Darren Criss,pink and purple colouring pencils,DarrenCriss.jpg,
-St. Paul's Cathedral,biro,StPauls.jpg,
-Westminster Abbey,watercolours,WestminsterAbbey.jpg,
+name,media,filename,purchase,id
+Vista,procreate,PrintVista.png,yes,vistaid
+Ellie,procreate,PrintEllie.png,yes,ellieid
+Bear Sketch,procreate,PrintBearSketch.png,,bearid
+Root Sketch,procreate,PrintRootSketch.png,,rootid
+Sameen Shaw Sketch,procreate,PrintSameenShawSketch.png,,shawid
+Harold Finch Sketch,procreate,PrintHaroldFinchSketch.png,,finchid
+John Reese Sketch,procreate,PrintJohnReeseSketch.png,,reeseid
+Round of Robins,procreate,PrintRobins.png,,robinsid
+European Robin,procreate,PrintEuropeanRobin.png,,eurobinid
+Oriental Magpie Robin,procreate,PrintOrientalMagpieRobin.png,,omrobinid
+Red-capped Robin,procreate,PrintRedCappedRobin.png,,rcrobinid
+Eastern Yellow Robin,procreate,PrintYellowRobin.png,,yrobinid
+Pink Robin,procreate,PrintPinkRobin.png,,probinid
+Niagara Falls,procreate,PrintNiagaraFalls.png,yes,niagarafallsid
+Wax Resist Experiment,procreate,PrintWaxResist.png,yes,waxresistid
+Root (II),adobe photoshop cs6,PrintRoot2.jpg,yes,rootiiid
+Harold Finch,adobe photoshop cs6,PrintFinch.png,yes,finchiiid
+Root,adobe photoshop cs6,PrintRoot.png,yes,rootiiiid
+Sameen Shaw,adobe photoshop cs6,PrintShaw.png,yes,shawiiid
+Lincoln,adobe photoshop cs6,PrintLincoln.png,yes,lincolnid
+Lexa (II),adobe photoshop cs6,PrintLexa.png,yes,lexaiiid
+Clarke Griffin,adobe photoshop cs6,PrintClarke.png,yes,clarkeid
+Chris Pratt,"HB, 3B and 7B pencils",ChrisPratt.jpg,,chrisprattid
+Chris Colfer,paint.NET,ChrisColfer.jpg,,chriscolferid
+Anna Kendrick,"HB, 2B, 3B and 6B pencils",AnnaKendrick.jpg,,akendrickid
+Joey Graceffa,"HB, 3B and 7B pencils",JoeyGraceffa.jpg,,jgraceffaid
+Lexa,"HB, 2B and 4B pencils",Lexa.jpg,,lexaid
+Heather Morris,"HB, 3B and 7B pencils",HeatherMorris.jpg,,hmorrisid
+Taylor Swift,"HB, 3B and 8B pencils",TaylorSwift.jpg,,tswiftid
+Jeff Blim,"HB, B and 3B pencils",JeffBlim.jpg,,jblimid
+Grace Helbig,"HB, B and 4B pencils",GraceHelbig.jpg,,ghelbigid
+Killian Jones,"HB, 3B and 8B pencils",Hook.jpg,,kjonesid
+Joe Moses,graphite pencils,JoeMoses.jpg,,jmosesid
+Klaine (Auditorium),graphite pencils,KlaineAuditorium.jpg,,klaineid
+Becca Tobin,graphite pencils,BeccaTobin.jpg,,btobinid
+Brittana (100),graphite pencils,Brittana100.jpg,,brittanaid
+Joey Richter,blue colouring pencils,JoeyRichter.jpg,,jrichterid
+Joe Walker,colouring pencils,JoeWalker.jpg,,jwalkerid
+Elsa,graphite pencils,Elsa.jpg,,elsaid
+Darren Criss,pink and purple colouring pencils,DarrenCriss.jpg,,dcrissid
+St. Paul's Cathedral,biro,StPauls.jpg,,stpaulsid
+Westminster Abbey,watercolours,WestminsterAbbey.jpg,,westminsterid

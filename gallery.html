@@ -57,7 +57,17 @@
     			font-family: 'Spectral', 'Georgia', serif;
     			text-transform: uppercase;
     			font-size: calc(1.5em + 1vw);
-    		}
+			}
+			
+			h3 {
+    			text-align: center;
+    			padding-top: 20px;
+    			font-weight: bold;
+    			letter-spacing: 0.2em;
+    			font-family: 'Spectral', 'Georgia', serif;
+    			text-transform: uppercase;
+    			font-size: calc(0.8em + 1vw);
+			}
 
     		.container-fluid {
     			padding-top: 3%;
@@ -109,8 +119,10 @@
 			<div class="row" >
 				<div class="col-sm-12 container-buffer d-flex justify-content-center" style="padding-top:35px" id="about">
 					<div class="text-justify w-50 width-adjust-50">
-					<h2 class="centered-title">Placeholder Title</h2>
-					<p>Placeholder text</p>
+					<h2 class="centered-title">Art</h2>
+					<p>	Here is a sample of some of my previous art pieces. I work across traditional and digital media, with a more recent focus on digital painting, including Procreate and Photoshop.
+						Under the <b>sketchbook</b> section you can also find a sample of works from my sketchbook, which I carry around with me in my backpack.  
+					</p>
 			   </div>
 			</div>
 		</section>
@@ -121,9 +133,15 @@
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
 					<button class="pagetab" id="gallerybtn" onclick='switchPageMode("gallerybtn")'>gallery</button>
 					<button class="pagetab" id="sketchbookbtn" onclick='switchPageMode("sketchbookbtn")'>sketchbook</button>
-					<button class="pagetab" id="printsbtn" onclick='switchPageMode("printsbtn")'>prints</button>
+					<!-- <button class="pagetab" id="printsbtn" onclick='switchPageMode("printsbtn")'>prints</button> -->
 				</div>
 				<div class="col-xs-auto container-buffer w-100" id="g-layout">
+				</div>
+				<div id="modal-outer" class="modal">
+					<div id="modal-inner" class="modal-content">
+						<span class="close">&times;</span>
+						<p>placeholder text</p> <!-- this is where we want to change the image src -->
+					</div>
 				</div>
 			</div>
 		</section>
@@ -199,7 +217,6 @@
 						}
 					}
 				}
-				console.log(returnarr);
 				return returnarr;
 			}
 		</script>
@@ -210,9 +227,15 @@
 			var gallery = data[0].gallery;
 			var sketchbook = data[0].sketchbook;
 			var galleryLayout = document.getElementById('g-layout');
+			var modal = document.getElementById('modal-outer');
+			var modalInner = document.getElementById('modal-inner');
 			let galleryhtml='';
+			let modalhtml='';
 			var slug = './images/art/thumbnails/';
+			var fullslug = './images/art/';
 			var prints = getPrints(data);
+			var dataToShow = gallery;
+			var clickedId = '';
 
 			// insert the gallery html
 			function displayGallery(displaydata) {
@@ -231,7 +254,7 @@
 					// add an artwork layout
 					galleryhtml += `
 						<div class="col-sm-4 art-outer">
-							<div class="art-layout">
+							<div class="art-layout" id="${artwork.id}">
 						`;
 
 					galleryhtml += `
@@ -297,11 +320,54 @@
 					default: dataToShow = gallery; break;
 				}
 				displayGallery(dataToShow);
+				setUpArtClick();
+			}
+		</script>
+
+		<script>
+		// handle art click
+			function setUpArtClick() {
+				for (artpiece of dataToShow) {
+					var clickable = document.getElementById(`${artpiece.id}`);
+					var closebtn = document.getElementsByClassName("close")[0];
+					
+					// atm this uses the last image in the list - need an early out somehow
+					if (clickable) {
+						clickable.onclick = function() {
+							modal.style.display = "block";
+							clickedId = this.id;
+							for (a of dataToShow) {
+								console.log(a.id);
+								if (a.id == this.id) {
+									modalInner.innerHTML = `<div class="modal-image">
+																<img src=${fullslug}${a.filename}>
+															</div>
+															<div class="modal-desc">
+																<h3>${a.name}</h3>
+																<p>${a.media}</p>
+															</div>`;
+								}
+							}
+						}
+					}
+				}
+
+				closebtn.onclick = function() {
+					modal.style.display = "none";
+					modalInner.innerHTML = "";
+				}
+
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
 			}
 		</script>
 
 		<script>
 			displayGallery(gallery);
+			setUpArtClick();
 		</script>
 	</body>
 </html>

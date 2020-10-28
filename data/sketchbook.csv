@@ -1,9 +1,9 @@
-name,media,filename
-Broken Gas Mask Ellie,graphite pencils,EllieGasMask.jpg
-Dina Study,graphite pencils,DinaStudy.jpg
-Dog Study,graphite pencils,DogStudy.jpg
-Ellie Study,graphite pencils,EllieStudy.jpg
-Bears Study,graphite pencils,bears.jpg
-Birds Study (II),graphite pencils,birds2.jpg
-Birds Study (I),graphite pencils,birds1.jpg
-Clicker,graphite pencils,Clicker.jpg
+name,media,filename,id
+Broken Gas Mask Ellie,graphite pencils,EllieGasMask.jpg,gasmaskid
+Dina Study,graphite pencils,DinaStudy.jpg,dinaid
+Dog Study,graphite pencils,DogStudy.jpg,dogiiid
+Ellie Study,graphite pencils,EllieStudy.jpg,ellieid
+Bears Study,graphite pencils,bears.jpg,bearsiiid
+Birds Study (II),graphite pencils,birds2.jpg,birdiiid
+Birds Study (I),graphite pencils,birds1.jpg,birdsid
+Clicker,graphite pencils,Clicker.jpg,clickerid
