@@ -32,10 +32,12 @@
 		href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script type="text/javascript" src="json/gallery.js"></script>
+		<script src="js/form-validation.js"></script>
     </head>
     
 	<body>
@@ -133,14 +135,15 @@
 				<div class="col-sm-12 container-buffer d-flex justify-content-center">
 					<button class="pagetab" id="gallerybtn" onclick='switchPageMode("gallerybtn")'>gallery</button>
 					<button class="pagetab" id="sketchbookbtn" onclick='switchPageMode("sketchbookbtn")'>sketchbook</button>
-					<!-- <button class="pagetab" id="printsbtn" onclick='switchPageMode("printsbtn")'>prints</button> -->
+					<button class="pagetab" id="printsbtn" onclick='switchPageMode("printsbtn")'>prints</button>
+					<!--<button class="pagetab" id="purchasebtn" onclick='switchPageMode("purchasebtn")'>purchase</button>-->
 				</div>
 				<div class="col-xs-auto container-buffer w-100" id="g-layout">
 				</div>
+
 				<div id="modal-outer" class="modal">
 					<div id="modal-inner" class="modal-content">
 						<span class="close">&times;</span>
-						<p>placeholder text</p> <!-- this is where we want to change the image src -->
 					</div>
 				</div>
 			</div>
@@ -236,6 +239,59 @@
 			var prints = getPrints(data);
 			var dataToShow = gallery;
 			var clickedId = '';
+			
+			let purchaseform = `
+				<div class="col-sm-12 container-buffer d-flex justify-content-center">
+					<div class="text-justify w-50 width-adjust-50" id="p-form">
+						<h2>Purchase Print</h2>
+						<form action="formsend.php" method="post" name="purchases" onkeydown="return event.key != 'Enter';">
+							<label for="firstname">First Name</label>
+							<input type="text" name="firstname" id="firstname"/>
+
+							<label for="lastname">Last Name (optional)</label>
+							<input type="text" name="lastname" id="lastname"/>
+
+							<label for="print">Print you would like to order</label>
+							<select name="print" id="print"> `;
+			
+			for (printavailable of prints) {
+				purchaseform += `<option value="${printavailable.id}">${printavailable.name}</option>`;
+			}
+								
+			purchaseform +=	`</select>
+
+							<label for="email">PayPal Email</label>
+							<input type="text" name="email" id="email"/>
+
+							<label for="email2">Confirm PayPal Email</label>
+							<input type="text" name="email2" id="email2"/>
+
+							<label for="address1">Address Line 1</label>
+							<input type="text" name="address1" id="address1"/>
+
+							<label for="address2">Address Line 2 (optional)</label>
+							<input type="text" name="address2" id="address2"/>
+
+							<label for="city">Town/City</label>
+							<input type="text" name="city" id="city"/>
+
+							<label for="county">Province/County</label>
+							<input type="text" name="county" id="county"/>
+
+							<label for="postcode">ZIP/Postal Code</label>
+							<input type="text" name="postcode" id="postcode"/>
+
+							<label for="country">Country</label>
+							<input type="text" name="country" id="country"/>
+
+							<label for="comments">Additional comments</label>
+							<input type="text" name="comments" id="comments"/>
+
+							<button type="submit" name="submit" class="send-btn">Send</button>
+						</form>
+					</div>
+				</div>
+			`;
 
 			// insert the gallery html
 			function displayGallery(displaydata) {
@@ -285,7 +341,8 @@
 			const pagemodes = {
 				GALLERY: 'gallerybtn',
 				SKETCHBOOK: 'sketchbookbtn',
-				PRINTS: 'printsbtn'
+				PRINTS: 'printsbtn',
+				PURCHASE: 'purchasebtn'
 			}
 			
 			let pagemode = pagemodes.GALLERY;
@@ -305,6 +362,9 @@
 				else if (btnid == 'printsbtn') {
 					pagemode = pagemodes.PRINTS;
 				}
+				else if (btnid == 'purchasebtn') {
+					pagemode = pagemodes.PURCHASE;
+				}
 				else {
 					console.log("argh why");
 				}				
@@ -319,7 +379,10 @@
 					case pagemodes.PRINTS: dataToShow = prints; break;
 					default: dataToShow = gallery; break;
 				}
-				displayGallery(dataToShow);
+				if (pagemode == pagemodes.PURCHASE) {
+					galleryLayout.innerHTML = purchaseform;
+				}
+				else { displayGallery(dataToShow); }
 				setUpArtClick();
 			}
 		</script>
@@ -364,7 +427,7 @@
 				}
 			}
 		</script>
-
+		
 		<script>
 			displayGallery(gallery);
 			setUpArtClick();
