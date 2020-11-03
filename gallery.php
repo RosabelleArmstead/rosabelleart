@@ -427,34 +427,34 @@
 					// atm this uses the last image in the list - need an early out somehow
 					if (clickable) {
 						clickable.onclick = function() {
+							let addhtml = '';
 							modal.style.display = "block";
 							clickedId = this.id;
 							for (a of dataToShow) {
 								console.log(a.id);
 								if (a.id == this.id) {
-									var printsizes;
+									
+									addhtml += `<div class="modal-image">
+													<img src=${fullslug}${a.filename}>
+												</div>
+												<div class="modal-desc">
+													<h3>${a.name}</h3>
+													<h5>${a.media}</h5>`;
 									if (a.purchase != "") {
-										printsizes = a.printtypes;
+										addhtml += `<p>Available prints: `;
+										var printsizes = a.printtypes;
+										for (q of printsizes) {
+											console.log(q);
+											addhtml += `${q}, `;
+										}
 									}
-									modalInner.innerHTML = `<div class="modal-image">
-																<img src=${fullslug}${a.filename}>
-															</div>
-															<div class="modal-desc">
-																<h3>${a.name}</h3>`;
-									// TODO: list available print sizes
-
-
-									modalInner.innerHTML +=		`<p>${a.media}</p>
-															</div>`;
+									addhtml += `</div>`;
+									
+									modalInner.innerHTML = addhtml;
 								}
 							}
 						}
 					}
-				}
-
-				closebtn.onclick = function() {
-					modal.style.display = "none";
-					modalInner.innerHTML = "";
 				}
 
 				window.onclick = function(event) {
@@ -462,6 +462,13 @@
 						modal.style.display = "none";
 					}
 				}
+				
+				$(document).keyup(function(e) {
+					if (e.key === "Escape") {
+						modal.style.display = "none";
+					}
+				});
+
 			}
 		</script>
 		
