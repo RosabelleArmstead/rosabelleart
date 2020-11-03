@@ -2,6 +2,7 @@
     $to = "rosabelle.art@gmail.com";
     $print = $_POST["print"];
     $name = $_POST["firstname"] . " " . $_POST["lastname"];
+    $printtype = $_POST["printtype"];
     
     $subject = "Print Enquiry: $print; $name";
 
@@ -23,6 +24,7 @@
     color: white;'>
     <th style='padding: 10px;'>Name</th>
     <th style='padding: 10px;'>Print</th>
+    <th style='padding: 10px;'>Print Size</th>
     <th style='padding: 10px;'>Email</th>
     </tr>
     <tr>
@@ -30,6 +32,8 @@
     background-color: #f0deff;'>$name</td>
     <td style='padding: 10px;
     background-color: #f0deff;'>$print</td>
+    <td style='padding: 10px;
+    background-color: #f0deff;'>$printtype</td>
     <td style='padding: 10px;
     background-color: #f0deff;'>$email</td>
     </tr>

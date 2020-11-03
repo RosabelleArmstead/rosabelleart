@@ -227,13 +227,6 @@
 						}
 					}
 				}
-				for (x of jsondata[0].sketchbook) {
-					if (x.hasOwnProperty('purchase')) {
-						if(x.purchase != "") {
-							returnarr.push(x);
-						}
-					}
-				}
 				return returnarr;
 			}
 		</script>
@@ -266,13 +259,17 @@
 							<input type="text" name="lastname" id="lastname"/>
 
 							<label for="print">Print you would like to order</label>
-							<select name="print" id="print"> `;
+							<select name="print" id="print" onchange="changePrint()"> `;
 			
 			for (printavailable of prints) {
 				purchaseform += `<option value="${printavailable.name}">${printavailable.name}</option>`;
-			}
-								
+			}								
 			purchaseform +=	`</select>
+
+							<label for="printtype">Print Size</label>
+							<select name="printtype" id="printtype">
+
+							</select>
 
 							<label for="email">PayPal Email</label>
 							<input type="text" name="email" id="email"/>
@@ -351,6 +348,25 @@
 		</script>
 		
 		<script>
+			// handle changing print type
+			function changePrint() {
+				var printoptions;
+				var selectedoption = $( "#print option:selected").val();
+				for (p of prints) {
+					if (selectedoption == p.name) {
+						printoptions = p.printtypes;
+					}
+				}
+				let optionhtml = '';
+				for (printoption of printoptions) {
+					optionhtml += `<option value="${printoption}">${printoption}</option>`;
+				}
+				var optionslist = document.getElementById('printtype');
+				optionslist.innerHTML = optionhtml;
+			};
+		</script>
+
+		<script>
             // handle page mode button press
 			const pagemodes = {
 				GALLERY: 'gallerybtn',
@@ -416,12 +432,19 @@
 							for (a of dataToShow) {
 								console.log(a.id);
 								if (a.id == this.id) {
+									var printsizes;
+									if (a.purchase != "") {
+										printsizes = a.printtypes;
+									}
 									modalInner.innerHTML = `<div class="modal-image">
 																<img src=${fullslug}${a.filename}>
 															</div>
 															<div class="modal-desc">
-																<h3>${a.name}</h3>
-																<p>${a.media}</p>
+																<h3>${a.name}</h3>`;
+									// TODO: list available print sizes
+
+
+									modalInner.innerHTML +=		`<p>${a.media}</p>
 															</div>`;
 								}
 							}
