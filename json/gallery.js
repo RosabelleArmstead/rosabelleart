@@ -2,12 +2,28 @@ art = `[
     { 
         "gallery": [
 			{
+				"name": "Kingfisher",
+				"media": "procreate",
+				"filename": "Kingfisher.png",
+				"purchase": "yes",
+				"id": "kingfisherid",
+				"printtypes": ["100mm x 100mm (£10)", "210mm x 210mm (£25)", "A5 - 5.8in x 8.3in (£35)", "A4 - 8.3in x 11.7in (£40)"]
+			},
+			{
+				"name": "Agent Carter",
+				"media": "procreate",
+				"filename": "AgentCarter.png",
+				"purchase": "yes",
+				"id": "agentcarterid",
+				"printtypes": ["100mm x 100mm (£10)", "210mm x 210mm (£25)", "A5 - 5.8in x 8.3in (£35)", "A4 - 8.3in x 11.7in (£40)"]
+			},
+			{
 			  "name": "Vista",
 			  "media": "procreate",
 			  "filename": "PrintVista.png",
 			  "purchase": "yes",
 			  "id": "vistaid",
-			  "printtypes": ["100mm x 100mm (£7)"]
+			  "printtypes": ["100mm x 100mm (£10)"]
 			},
 			{
 			  "name": "Ellie",
@@ -111,7 +127,7 @@ art = `[
 			  "filename": "PrintNiagaraFalls.png",
 			  "purchase": "yes",
 			  "id": "niagarafallsid",
-			  "printtypes": ["100mm x 100mm (£7)"],
+			  "printtypes": ["100mm x 100mm (£10)"],
 			  "printtypes": []
 			},
 			{
@@ -120,7 +136,7 @@ art = `[
 			  "filename": "PrintWaxResist.png",
 			  "purchase": "yes",
 			  "id": "waxresistid",
-			  "printtypes": ["100mm x 100mm (£7)", "A5 - 5.8in x 8.3in (£35)", "A4 - 8.3in x 11.7in (£40)"]
+			  "printtypes": ["100mm x 100mm (£10)", "A5 - 5.8in x 8.3in (£35)", "A4 - 8.3in x 11.7in (£40)"]
 			},
 			{
 			  "name": "Root (II)",
